@@ -1,8 +1,9 @@
 spring:
   data:
     mongodb:
-      database: beer_appetit_api
-      host: localhost
-      port: 27017
+      authentication-database: admin
       username: root
       password: root
+      database: forum
+      port: 27017
+      host: localhost

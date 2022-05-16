@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mongo:
-    container_name: mongo_tp_forum
+    container_name: mongo_forum
     image: mongo
     ports:
       - "27017:27017"
@@ -10,7 +10,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
   mongo-express:
-    container_name: mongo_express_tp_forum
+    container_name: mongo_express_forum
     image: mongo-express
     depends_on:
       - mongo
