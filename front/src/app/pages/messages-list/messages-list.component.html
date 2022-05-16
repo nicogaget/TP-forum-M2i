@@ -1,0 +1,30 @@
+<div>
+  <a routerLink="/sujets" class="btn btn-warning fs-5">Retour aux sujets</a>
+</div>
+
+<div *ngIf="sujet">
+  <h1>Sujet :</h1>
+  <app-sujet [sujet]="sujet" [showMessage]="showMessage"></app-sujet>
+  <div *ngIf="!showMessageForm">
+    <button class="btn btn-info" (click)="displayForm()">
+      Ajout un message
+    </button>
+  </div>
+  <div *ngIf="showMessageForm" class="border p-2">
+    <app-message-form
+      (sendMessageEvent)="sendMessage($event)"
+      [sujetId]="sujetId"
+    ></app-message-form>
+
+    <button class="btn btn-danger" (click)="displayForm()">Annuler</button>
+  </div>
+
+  <h1>Messages du sujet :</h1>
+  <ng-container *ngFor="let message of sujet.messages">
+    <app-message-details [message]="message"></app-message-details>
+  </ng-container>
+</div>
+
+<div>
+  <a routerLink="/sujets" class="btn btn-warning fs-5">Retour aux sujets</a>
+</div>

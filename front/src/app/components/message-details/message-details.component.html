@@ -1,0 +1,17 @@
+<div class="card w-100 d-flex flex-row m-3 bg-primary">
+  <div class="w-75">
+    <div class="card-header d-flex justify-content-between">
+      <h3 class="mx-3">
+        Crée le {{ message.createdAt | date: "dd" }}/{{
+          message.createdAt | date: "MM"
+        }}/{{ message.createdAt | date: "yyyy" }} à
+        {{ message.createdAt | date: "h:mm" }}
+      </h3>
+    </div>
+    <div class="card-body">
+      <div class="">
+        <h2>{{ message.content }}</h2>
+      </div>
+    </div>
+  </div>
+</div>

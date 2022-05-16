@@ -1,0 +1,46 @@
+<div *ngIf="sujet" class="card w-100 d-flex flex-row bg-secondary m-4">
+  <div class="w-75">
+    <div class="card-header">
+      <h2 class="">{{ sujet.title }}</h2>
+      <div>
+        <h3 *ngIf="sujet.messages">
+          <div *ngIf="sujet.messages.length > 0">
+            {{ sujet.messages.length }} messages
+          </div>
+          <div *ngIf="sujet.messages.length <= 0">Aucun message</div>
+        </h3>
+        <p>
+          Crée le {{ sujet.createdAt | date: "dd" }}/{{
+            sujet.createdAt | date: "MM"
+          }}/{{ sujet.createdAt | date: "yyyy" }} à
+          {{ sujet.createdAt | date: "h:mm" }}
+        </p>
+        <p>
+          Modifié le {{ sujet.updatedAt | date: "dd" }}/{{
+            sujet.updatedAt | date: "MM"
+          }}/{{ sujet.updatedAt | date: "yyyy" }} à
+          {{ sujet.updatedAt | date: "h:mm" }}
+        </p>
+        <p></p>
+      </div>
+    </div>
+
+    <div *ngIf="!showMessage" class="card-body">
+      <button
+        class="btn btn-warning"
+        routerLink="/sujets/{{ sujet.id }}/messages/"
+      >
+        Entrer dans la conversation
+      </button>
+    </div>
+  </div>
+  <div class="w-25 d-flex flex">
+    <div>
+      <p>nbr de like : {{ sujet.likes }}</p>
+    </div>
+    <div class="d-flex flex-column">
+      <img (click)="like()" src="/assets/like.png" alt="" />
+      <img (click)="unlike()" src="/assets/unlike.png" alt="" />
+    </div>
+  </div>
+</div>
