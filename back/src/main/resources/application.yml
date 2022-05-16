@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      database: beer_appetit_api
+      host: localhost
+      port: 27017
+      username: root
+      password: root
