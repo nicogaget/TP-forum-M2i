@@ -29,14 +29,7 @@ export class MessageFormComponent implements OnInit {
 
   sendMessage() {
     this.message = this.messageForm.getRawValue();
-    // this.sujetService.postMessage(this.sujetId, message).subscribe({
-    //   next: (data) => {
-    //     console.log(data);
-    //   },
-    //   error: (err) => {
-    //     this.errorMessage = err.error.message;
-    //   },
-    // });
+
     this.sendMessageEvent.emit(this.message);
     console.log(this.message);
   }
