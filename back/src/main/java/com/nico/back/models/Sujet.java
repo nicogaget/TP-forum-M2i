@@ -31,6 +31,11 @@ public class Sujet {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    public Sujet(String title, Message message) {
+        this.title =title;
+        this.messages.add(message);
+    }
+
     public String getId() {
         return id;
     }

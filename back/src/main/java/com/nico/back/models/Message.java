@@ -23,6 +23,10 @@ public class Message {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    public Message(String message) {
+        this.content = message;
+    }
+
 
     public String getId() {
         return id;

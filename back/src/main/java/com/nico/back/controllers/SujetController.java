@@ -26,6 +26,7 @@ public class SujetController {
 
     @PostMapping
     public Sujet create(@RequestBody Sujet sujet) {
+        System.out.println(sujet);
         return this.service.create(sujet);
     }
 
@@ -56,5 +57,6 @@ public class SujetController {
 
       return this.service.addMessage(id,message);
     }
+
 
 }
