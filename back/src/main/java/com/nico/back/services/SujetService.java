@@ -65,6 +65,7 @@ public class SujetService {
     public Sujet addMessage(String id, Message message){
         Sujet sujet = this.sujetRepository.findById(id).get();
         message =this.messageService.create(message);
+        System.out.println(message);
         sujet.addMessage(message);
         return this.sujetRepository.save(sujet);
 

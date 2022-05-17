@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Document
@@ -25,7 +26,7 @@ public class Sujet {
     private String title;
     private int likes;
     @DBRef
-    private List<Message> messages;
+    private List<Message> messages= new ArrayList<>();
     @CreatedDate
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
