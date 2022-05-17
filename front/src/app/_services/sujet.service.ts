@@ -37,6 +37,8 @@ export class SujetService {
   }
 
   postMessage(id: string, message: Message) {
+    console.log(message);
+
     return this.http.post(
       `${environment.apiBaseUrl}/sujets/${id}/messages`,
       message

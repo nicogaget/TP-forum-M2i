@@ -40,7 +40,7 @@ export class MessagesListComponent implements OnInit {
   sendMessage(message: Message) {
     this.sujetService.postMessage(this.sujetId, message).subscribe({
       next: (data) => {
-        console.log(data);
+        console.log('hello', data);
       },
       error: (err) => {
         this.errorMessage = err.error.message;

@@ -1,3 +1,5 @@
+<app-form-sujet (addSujetEvent)="addSujet($event)"></app-form-sujet>
+
 <div *ngIf="sujets">
   <ng-container *ngFor="let sujet of sujets">
     <app-sujet [sujet]="sujet"></app-sujet>

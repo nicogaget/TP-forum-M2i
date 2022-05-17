@@ -31,7 +31,6 @@ export class MessageFormComponent implements OnInit {
     this.message = this.messageForm.getRawValue();
 
     this.sendMessageEvent.emit(this.message);
-    console.log(this.message);
   }
   ngOnInit(): void {}
 }

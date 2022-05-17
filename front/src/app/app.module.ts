@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SujetComponent } from './components/sujet/sujet.component';
 import { MessageComponent } from './components/message/message.component';
 import { MessageFormComponent } from './components/message-form/message-form.component';
+import { FormSujetComponent } from './form-sujet/form-sujet.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MessageFormComponent } from './components/message-form/message-form.com
     SujetComponent,
     MessageComponent,
     MessageFormComponent,
+    FormSujetComponent,
   ],
   imports: [
     BrowserModule,
